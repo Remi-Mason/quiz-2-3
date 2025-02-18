@@ -611,7 +611,11 @@ transform: translateY(-240px) scale(0.95);
     <!-- Image GBC (non overlay) -->
     <img src="images/GBC.png" alt="GBC" style="display: none; margin: -200px auto 0 auto; border: 3px solid black; width: 290px; height: auto; position: relative; z-index: 2;">
     <!-- Bouton mute, bouton start et bouton INDEX (petit) -->
-    <img id="mute-btn" src="images/mute-off.gif" alt="Son activé" style="cursor: pointer; width: 30px; height: 25px; margin-bottom: 20px; margin-top: 25px;">
+    <div class="mute-wrapper" style="position: relative; display: inline-block; text-align: center;">
+    <img id="mute-btn" src="images/mute-off.gif" alt="Son activé" style="cursor: pointer; width: 30px; height: 25px; margin: 10px auto; display: block;">
+    <img id="additional-image" src="images/diez.png" alt="Nouvelle image" 
+         style="position: absolute; right: -120px; top: 50%; transform: translateY(-50%); cursor: pointer; width: 60px;">
+  </div>
     <button id="start-btn"><img src="images/start.png" style="margin-bottom: -30px; width: 120px"></button>
     <button id="home-index-btn">INDEX</button>
   </div>
