@@ -1202,7 +1202,7 @@ shuffleArray(quizData);
     });
     
     // Affichage de la question
-    function showQuestion() {
+  function showQuestion() {
       resultDiv.innerHTML = "";
       const data = quizData[currentQuestion];
       questionCounterEl.textContent = `${currentQuestion + 1} / ${quizData.length}`;
@@ -1434,6 +1434,13 @@ shuffleArray(quizData);
         });
       });
     });
+	  if (/Mobi|Android/i.test(navigator.userAgent)) {
+  window.addEventListener('beforeunload', function (e) {
+    // Certains navigateurs mobiles n'affichent pas de message personnalisé
+    e.preventDefault();
+    e.returnValue = "Attention, actualiser la page réinitialisera votre quiz. Êtes-vous sûr ?";
+  });
+}
   </script>
 </body>
 </html>
